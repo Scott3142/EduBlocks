@@ -59,6 +59,12 @@ turtleDefs(Blockly.Blocks);
 turtleGens(Blockly.Python as any);
 toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'turtle', 'toolbox.xml'));
 
+import streamDefs from './stream/definitions';
+import streamGens from './stream/generators';
+streamDefs(Blockly.Blocks);
+streamGens(Blockly.Python as any);
+toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'stream', 'toolbox.xml'));
+
 
 
 toolBoxXml += '</xml>';
