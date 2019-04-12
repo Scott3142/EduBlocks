@@ -1,25 +1,29 @@
 export default function define(Blocks: Blockly.BlockDefinitions) {
-    Blocks['import_stream'] = {
-    init: function() {
-        this.appendDummyInput()
-            .appendField("import stream");
-        this.setPreviousStatement(true, null);
-        this.setNextStatement(true, null);
-        this.setColour(36);
-        this.setTooltip(""); 
-        }
-    }
 
-    Blocks['start_stream'] = {
+    Blocks['start_video'] = {
     init: function() {
         this.appendDummyInput()
-            .appendField("start stream");
+            .appendField("start video");
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setColour(36);
         this.setTooltip("");
         }
     }
+
+    Blocks['send_stream_key'] = {
+      init: function () {
+        this.appendDummyInput()
+          .appendField('send_stream_key(')
+          .appendField(new Blockly.FieldTextInput('0'), 'value')
+          .appendField(')');
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(36);
+        this.setTooltip('Paste your Youtube streaming key in the box.');
+        this.setHelpUrl('');
+      },
+    };
 
     Blocks['stop_stream'] = {
     init: function() {

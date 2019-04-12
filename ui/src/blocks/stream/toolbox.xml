@@ -1,5 +1,5 @@
 <category name="stream" colour="36">
-    <block type="import_stream"></block>
-    <block type="start_stream"></block>
+    <block type="start_video"></block>
+    <block type="send_stream_key"></block>
     <block type="stop_stream"></block>
 </category>  
